@@ -1,24 +1,26 @@
-<html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
 
-<header>
-    <title>AutoUpdate</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="assets/js/update.js" type="text/javascript"></script>
+    <title>Auto Update System</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
 
-</header>
+    <link rel="stylesheet" href="assets/css/style.css?v=1.0">
+</head>
 
 <body>
-
+<div>
     <div>
-        <div>
-            Update System.
-            <a class="check-update"
-               id="1"
-               style="cursor: pointer; color: blue;">Check Update</a>
-            <span class="loading"></span>
-        </div>
+        Update System.
+        <a class="check-update"
+           id="1"
+           style="cursor: pointer; color: blue;">Check Update</a>
+        <span class="loading"></span>
     </div>
+</div>
 
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/update.js" type="text/javascript"></script>
 </body>
-
 </html>
