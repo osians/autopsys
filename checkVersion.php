@@ -25,14 +25,14 @@ $result = ($localVersion === $remoteVersion)
     ? array("version" => 0)
     : array("version" => $remoteVersion);
 
-// success
-if ($remoteVersion !== false) {
-    header('Content-Type: application/json');
-    echo json_encode($result);
-    die();
+// error
+if ($remoteVersion === false || $localVersion === false) {
+    header('HTTP/1.1 500 Internal Server Error');
+    header('Content-Type: application/json; charset=UTF-8');
+    die(json_encode(array('message' => $message, 'code' => 1337)));
 }
 
-// error
-header('HTTP/1.1 500 Internal Server Error');
-header('Content-Type: application/json; charset=UTF-8');
-die(json_encode(array('message' => $message, 'code' => 1337)));
+// success
+file_put_contents(LOCAL_NEW_VERSION_NUMBER, $remoteVersion);
+header('Content-Type: application/json');
+echo json_encode($result);

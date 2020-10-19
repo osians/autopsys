@@ -1,3 +1,4 @@
+<!DOCTYPE>
 <html lang="pt">
 <head>
     <meta charset="utf-8">
@@ -10,13 +11,12 @@
 </head>
 
 <body>
-<div>
+<div class="auto-update-container">
     <div>
-        Update System.
-        <a class="check-update"
-           id="1"
-           style="cursor: pointer; color: blue;">Check Update</a>
+        Update System.<br><br>
+        <a class="check-update" id="check-update">Check Update</a><br><br>
         <span class="loading"></span>
+
     </div>
 </div>
 
